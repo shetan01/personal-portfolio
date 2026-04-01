@@ -20,6 +20,7 @@ import heroBgImg from "../assets/images/hero-bg.png";
 import natureAbstractImg from "../assets/images/nature-abstract.png";
 import waterSportsImg from "../assets/images/water-sports.png";
 import techAbstractImg from "../assets/images/tech-abstract.png";
+import sherrySurfingImg from "@assets/4d4adbb26bc78991d35713d42092b8_1775083276565.JPG";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -85,6 +86,27 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         </div>
+
+        {/* Sherry's surfing photo — floats on the right in the hero */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, x: 40 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
+          className="hidden lg:block absolute right-16 top-1/2 -translate-y-1/2 z-10 w-72 xl:w-80"
+        >
+          <div className="relative">
+            <div className="aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl border-4 border-white/20">
+              <img
+                src={sherrySurfingImg}
+                alt="Sherry surfing"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg backdrop-blur-sm">
+              Out on the water
+            </div>
+          </div>
+        </motion.div>
         
         <div className="relative z-10 max-w-4xl">
           <motion.div
@@ -310,10 +332,14 @@ export default function Home() {
             >
               <div className="aspect-[4/5] relative overflow-hidden rounded-2xl shadow-2xl">
                 <img 
-                  src={waterSportsImg} 
-                  alt="Vibrant water sports abstract" 
-                  className="w-full h-full object-cover"
+                  src={sherrySurfingImg} 
+                  alt="Sherry surfing with arms raised" 
+                  className="w-full h-full object-cover object-center"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="text-white font-serif italic text-xl drop-shadow-lg">Riding the wave.</span>
+                </div>
               </div>
             </motion.div>
           </div>
