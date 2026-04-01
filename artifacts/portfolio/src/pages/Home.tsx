@@ -17,12 +17,13 @@ import {
 } from "@/components/ui/form";
 
 import heroBgImg from "../assets/images/hero-bg.png";
-import natureAbstractImg from "../assets/images/nature-abstract.png";
-import waterSportsImg from "../assets/images/water-sports.png";
 import techAbstractImg from "../assets/images/tech-abstract.png";
 import sherrySurfingImg from "@assets/4d4adbb26bc78991d35713d42092b8_1775083276565.JPG";
-import sherryPaddlingImg from "@assets/13b34c015c9b3d94f4d692dfe5a539_1775084428132.JPG";
-import sherrySwimmingImg from "@assets/02F45BA2-63B8-4A70-B284-706A3CA75B69_1775086123942.JPG";
+import sherrySUPImg from "@assets/9EE1ACC7-4F92-4BDF-8B14-275460EDE4F5_1775087395231.JPG";
+import sherryTahoeImg from "@assets/367A8A4D-B34D-40D5-B2DA-79A3579FC419_1775087395229.JPG";
+import sherryHawaiiImg from "@assets/EC7141D8-FC88-4489-B307-7DA1C6F64237_1775087395230.JPG";
+import sherryKayakImg from "@assets/03C6D390-6E8E-4213-834D-0CB53F29E356_1775087395231.JPG";
+import sherrySnorkelImg from "@assets/1EDD7BF1-63DA-4BBD-AD3B-99B65F12AA5B_1775087395232.JPG";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -154,10 +155,10 @@ export default function Home() {
             >
               <div className="aspect-[4/5] relative overflow-hidden bg-muted rounded-xl shadow-2xl">
                 <img 
-                  src={sherryPaddlingImg} 
-                  alt="Sherry ocean paddleboarding" 
+                  src={sherrySUPImg} 
+                  alt="Sherry paddleboarding on the ocean" 
                   className="object-cover w-full h-full"
-                  style={{ objectPosition: '35% 88%' }}
+                  style={{ objectPosition: 'center 70%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
@@ -288,79 +289,111 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8"
+            className="mb-16 md:mb-20"
           >
-            <div>
-              <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">Life Outside Work</p>
-              <h2 className="text-5xl md:text-6xl font-serif">Drawn to the water.</h2>
-            </div>
-            <p className="text-muted-foreground max-w-sm text-lg">
-              When I close my laptop, you will find me outdoors. The ocean is my ultimate reset button.
+            <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">Life Outside Work</p>
+            <h2 className="text-5xl md:text-6xl font-serif mb-6">Drawn to water,<br/>wild places, and wonder.</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+              From icy Lake Tahoe swims in January to surfing California breaks, exploring Hawaiian reefs to kayaking through redwood canyons — the outdoors is where I go to think, reset, and feel fully alive.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            {/* Lake Tahoe winter swim — hero of the gallery */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="order-2 md:order-1 space-y-8"
+              className="md:col-span-2"
             >
-              <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-foreground">Ocean Paddling & Swimming</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  There is a unique clarity that comes from being on the open water at dawn. The rhythm of the stroke, the vastness of the horizon, and the sheer power of the ocean remind me to stay grounded and present.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-foreground">Nature Photography</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  I love capturing the interplay of light and texture in nature. It forces me to slow down, observe closely, and appreciate the fleeting beauty of a single moment in time.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-foreground">Snorkeling & Skiing</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Whether exploring vibrant coral reefs beneath the surface or gliding across a glassy lake, I am continually inspired by the dynamic energy of water.
-                </p>
+              <div className="relative h-72 md:h-[28rem] overflow-hidden rounded-2xl shadow-2xl group">
+                <img
+                  src={sherryTahoeImg}
+                  alt="Swimming in Lake Tahoe in winter with snow-capped mountains"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ objectPosition: 'center 40%' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                <div className="absolute bottom-7 left-7">
+                  <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">Winter swim</p>
+                  <p className="text-white font-serif italic text-2xl md:text-3xl drop-shadow-lg">Cold water. Clear mind.</p>
+                  <p className="text-white/60 text-sm mt-1 font-sans">Lake Tahoe, January</p>
+                </div>
               </div>
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+            {/* Hawaii aerial — nature photography */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="order-1 md:order-2 flex flex-col gap-4"
+              transition={{ duration: 0.8, delay: 0.1 }}
             >
-              {/* Surfing photo — top, taller */}
-              <div className="aspect-[4/3] relative overflow-hidden rounded-2xl shadow-2xl">
-                <img 
-                  src={sherrySurfingImg} 
-                  alt="Sherry surfing with arms raised" 
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: 'center 30%' }}
+              <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-xl group">
+                <img
+                  src={sherryHawaiiImg}
+                  alt="Aerial view of Hawaiian sea cliffs and ocean"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ objectPosition: 'center 40%' }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-4 left-5">
-                  <span className="text-white font-serif italic text-lg drop-shadow-lg">Riding the wave.</span>
-                </div>
-              </div>
-              {/* Swimming photo — bottom, shorter */}
-              <div className="aspect-[16/7] relative overflow-hidden rounded-2xl shadow-2xl">
-                <img 
-                  src={sherrySwimmingImg} 
-                  alt="Sherry swimming in the ocean" 
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: 'center 78%' }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                <div className="absolute bottom-4 left-5">
-                  <span className="text-white font-serif italic text-base drop-shadow-lg">In her element.</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute bottom-5 left-5">
+                  <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">Nature photography</p>
+                  <p className="text-white font-serif italic text-xl drop-shadow-lg">Above the clouds</p>
+                  <p className="text-white/60 text-sm mt-1 font-sans">Kauai, Hawaii</p>
                 </div>
               </div>
             </motion.div>
+
+            {/* Snorkeling Hawaii */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-xl group">
+                <img
+                  src={sherrySnorkelImg}
+                  alt="Snorkeling in Hawaii"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ objectPosition: 'center 55%' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute bottom-5 left-5">
+                  <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">Snorkeling</p>
+                  <p className="text-white font-serif italic text-xl drop-shadow-lg">Underwater worlds</p>
+                  <p className="text-white/60 text-sm mt-1 font-sans">Maui, Hawaii</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* River kayaking — full width closer */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="md:col-span-2"
+            >
+              <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-xl group">
+                <img
+                  src={sherryKayakImg}
+                  alt="River kayaking through a redwood canyon"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ objectPosition: 'center 42%' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute bottom-7 left-7">
+                  <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">River kayaking</p>
+                  <p className="text-white font-serif italic text-2xl drop-shadow-lg">Deeper into the green.</p>
+                  <p className="text-white/60 text-sm mt-1 font-sans">Redwood canyons, California</p>
+                </div>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
