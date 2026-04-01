@@ -18,3 +18,27 @@ id = "KiOCNtclacNjDKsgdQ1S7"
 uri = "file://artifacts/portfolio/src/assets/images/avatar-placeholder.png"
 type = "image"
 title = "Geometric avatar placeholder"
+
+[[generated]]
+id = "47nJT0n2hteLHb74OOr11"
+uri = "file://artifacts/portfolio/src/assets/images/hero-bg.png"
+type = "image"
+title = "Abstract ocean water scene"
+
+[[generated]]
+id = "8Kdp7YEwhGID9anhUGQiJ"
+uri = "file://artifacts/portfolio/src/assets/images/nature-abstract.png"
+type = "image"
+title = "Nature photography abstract"
+
+[[generated]]
+id = "3HQdanK4EepuPjiX2ZZiS"
+uri = "file://artifacts/portfolio/src/assets/images/water-sports.png"
+type = "image"
+title = "Water sports abstract"
+
+[[generated]]
+id = "BwHTdM56HWMGIeZD8c6fQ"
+uri = "file://artifacts/portfolio/src/assets/images/tech-abstract.png"
+type = "image"
+title = "High tech fintech abstract"

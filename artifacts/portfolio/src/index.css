@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -36,7 +36,7 @@
   --color-destructive-foreground: hsl(var(--destructive-foreground));
 
   --font-sans: 'DM Sans', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-serif: 'Cormorant Garamond', serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -46,70 +46,71 @@
 }
 
 :root {
-  /* Warm linen off-white background, espresso foreground, terracotta primary */
-  --background: 36 33% 97%;
-  --foreground: 20 14% 16%;
+  /* Ocean-inspired light mode */
+  --background: 45 30% 97%; /* Warm sand / off-white */
+  --foreground: 215 40% 15%; /* Deep ocean navy */
   
-  --border: 20 14% 16% / 0.1;
-  --input: 20 14% 16% / 0.15;
-  --ring: 15 50% 45%;
+  --border: 200 20% 85%;
+  --input: 200 20% 85%;
+  --ring: 195 80% 45%; /* Aqua/Teal */
   
-  --card: 36 33% 99%;
-  --card-foreground: 20 14% 16%;
-  --card-border: 20 14% 16% / 0.05;
+  --card: 45 40% 99%;
+  --card-foreground: 215 40% 15%;
+  --card-border: 200 20% 90%;
   
-  --popover: 36 33% 99%;
-  --popover-foreground: 20 14% 16%;
-  --popover-border: 20 14% 16% / 0.05;
+  --popover: 45 40% 99%;
+  --popover-foreground: 215 40% 15%;
+  --popover-border: 200 20% 90%;
   
-  /* Terracotta / rust */
-  --primary: 15 50% 45%;
-  --primary-foreground: 36 33% 97%;
+  /* Aqua/Teal primary */
+  --primary: 195 80% 40%;
+  --primary-foreground: 0 0% 100%;
   
-  /* Soft taupe */
-  --secondary: 30 20% 85%;
-  --secondary-foreground: 20 14% 16%;
+  /* Sunlit coral/amber */
+  --secondary: 25 80% 65%;
+  --secondary-foreground: 0 0% 100%;
   
-  --muted: 30 15% 90%;
-  --muted-foreground: 20 10% 40%;
+  /* Soft sea foam */
+  --muted: 195 30% 92%;
+  --muted-foreground: 215 20% 40%;
   
-  --accent: 15 30% 85%;
-  --accent-foreground: 20 14% 16%;
+  --accent: 195 40% 85%;
+  --accent-foreground: 215 40% 15%;
   
   --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 100%;
 
-  --radius: 0.25rem;
+  --radius: 0.5rem;
 }
 
 .dark {
-  /* Deep espresso background, soft off-white foreground, muted terracotta primary */
-  --background: 20 14% 10%;
-  --foreground: 36 33% 90%;
+  /* Deep water dark mode */
+  --background: 220 50% 8%;
+  --foreground: 45 30% 95%;
   
-  --border: 36 33% 90% / 0.1;
-  --input: 36 33% 90% / 0.15;
-  --ring: 15 40% 55%;
+  --border: 215 30% 20%;
+  --input: 215 30% 20%;
+  --ring: 195 80% 45%;
   
-  --card: 20 14% 12%;
-  --card-foreground: 36 33% 90%;
-  --card-border: 36 33% 90% / 0.05;
+  --card: 215 40% 12%;
+  --card-foreground: 45 30% 95%;
+  --card-border: 215 30% 18%;
   
-  --popover: 20 14% 12%;
-  --popover-foreground: 36 33% 90%;
-  --popover-border: 36 33% 90% / 0.05;
+  --popover: 215 40% 12%;
+  --popover-foreground: 45 30% 95%;
+  --popover-border: 215 30% 18%;
   
-  --primary: 15 40% 55%;
-  --primary-foreground: 20 14% 10%;
+  --primary: 195 80% 45%;
+  --primary-foreground: 220 50% 8%;
   
-  --secondary: 20 10% 20%;
-  --secondary-foreground: 36 33% 90%;
+  --secondary: 25 70% 55%;
+  --secondary-foreground: 220 50% 8%;
   
-  --muted: 20 10% 20%;
-  --muted-foreground: 36 20% 70%;
+  --muted: 215 30% 18%;
+  --muted-foreground: 200 20% 70%;
   
-  --accent: 15 20% 25%;
-  --accent-foreground: 36 33% 90%;
+  --accent: 215 30% 20%;
+  --accent-foreground: 45 30% 95%;
   
   --destructive: 0 60% 40%;
   --destructive-foreground: 0 0% 100%;
