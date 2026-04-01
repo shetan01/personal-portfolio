@@ -22,6 +22,7 @@ import waterSportsImg from "../assets/images/water-sports.png";
 import techAbstractImg from "../assets/images/tech-abstract.png";
 import sherrySurfingImg from "@assets/4d4adbb26bc78991d35713d42092b8_1775083276565.JPG";
 import sherryPaddlingImg from "@assets/13b34c015c9b3d94f4d692dfe5a539_1775084428132.JPG";
+import sherrySwimmingImg from "@assets/02F45BA2-63B8-4A70-B284-706A3CA75B69_1775086123942.JPG";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -155,7 +156,8 @@ export default function Home() {
                 <img 
                   src={sherryPaddlingImg} 
                   alt="Sherry ocean paddleboarding" 
-                  className="object-cover w-full h-full object-center"
+                  className="object-cover w-full h-full"
+                  style={{ objectPosition: '35% 88%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
@@ -330,17 +332,32 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="order-1 md:order-2"
+              className="order-1 md:order-2 flex flex-col gap-4"
             >
-              <div className="aspect-[4/5] relative overflow-hidden rounded-2xl shadow-2xl">
+              {/* Surfing photo — top, taller */}
+              <div className="aspect-[4/3] relative overflow-hidden rounded-2xl shadow-2xl">
                 <img 
                   src={sherrySurfingImg} 
                   alt="Sherry surfing with arms raised" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 30%' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-4 left-5">
+                  <span className="text-white font-serif italic text-lg drop-shadow-lg">Riding the wave.</span>
+                </div>
+              </div>
+              {/* Swimming photo — bottom, shorter */}
+              <div className="aspect-[16/7] relative overflow-hidden rounded-2xl shadow-2xl">
+                <img 
+                  src={sherrySwimmingImg} 
+                  alt="Sherry swimming in the ocean" 
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 78%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <span className="text-white font-serif italic text-xl drop-shadow-lg">Riding the wave.</span>
+                <div className="absolute bottom-4 left-5">
+                  <span className="text-white font-serif italic text-base drop-shadow-lg">In her element.</span>
                 </div>
               </div>
             </motion.div>
