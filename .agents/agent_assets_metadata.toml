@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "fcGINGjpyCo8QbDYW7FdN"
+uri = "file://artifacts/portfolio/src/assets/images/abstract-hero.png"
+type = "image"
+title = "Abstract terracotta geometry"
+
+[[generated]]
+id = "8m7Hv2N2FtYHUbTGgyASS"
+uri = "file://artifacts/portfolio/src/assets/images/abstract-projects.png"
+type = "image"
+title = "Architectural light shadow"
+
+[[generated]]
+id = "KiOCNtclacNjDKsgdQ1S7"
+uri = "file://artifacts/portfolio/src/assets/images/avatar-placeholder.png"
+type = "image"
+title = "Geometric avatar placeholder"
