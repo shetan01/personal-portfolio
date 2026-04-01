@@ -21,6 +21,7 @@ import natureAbstractImg from "../assets/images/nature-abstract.png";
 import waterSportsImg from "../assets/images/water-sports.png";
 import techAbstractImg from "../assets/images/tech-abstract.png";
 import sherrySurfingImg from "@assets/4d4adbb26bc78991d35713d42092b8_1775083276565.JPG";
+import sherryPaddlingImg from "@assets/13b34c015c9b3d94f4d692dfe5a539_1775084428132.JPG";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -152,10 +153,11 @@ export default function Home() {
             >
               <div className="aspect-[4/5] relative overflow-hidden bg-muted rounded-xl shadow-2xl">
                 <img 
-                  src={natureAbstractImg} 
-                  alt="Nature and photography inspired abstract" 
-                  className="object-cover w-full h-full"
+                  src={sherryPaddlingImg} 
+                  alt="Sherry ocean paddleboarding" 
+                  className="object-cover w-full h-full object-center"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
               <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-primary/10 backdrop-blur-md border border-primary/20 text-foreground flex items-center justify-center rounded-full p-4 text-center shadow-xl">
                 <span className="font-serif italic text-xl leading-tight">Vivid,<br/>Adventurous,<br/>Warm</span>
