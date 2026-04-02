@@ -24,6 +24,7 @@ import sherryTahoeImg from "@assets/367A8A4D-B34D-40D5-B2DA-79A3579FC419_1775087
 import sherryHawaiiImg from "@assets/EC7141D8-FC88-4489-B307-7DA1C6F64237_1775087395230.JPG";
 import sherryKayakImg from "@assets/03C6D390-6E8E-4213-834D-0CB53F29E356_1775087395231.JPG";
 import sherrySnorkelImg from "@assets/1EDD7BF1-63DA-4BBD-AD3B-99B65F12AA5B_1775087395232.JPG";
+import sherryHorseImg from "@assets/9431DB7E-45C0-498D-BE3D-9EBC3B8353A1_1775150365555.JPG";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -298,7 +299,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
             {/* Lake Tahoe winter swim — hero of the gallery */}
             <motion.div
@@ -306,7 +307,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="md:col-span-2"
+              className="md:col-span-3"
             >
               <div className="relative h-72 md:h-[28rem] overflow-hidden rounded-2xl shadow-2xl group">
                 <img
@@ -370,13 +371,36 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* River kayaking — full width closer */}
+            {/* Horseback riding — equestrian */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="md:col-span-2"
+            >
+              <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-xl group">
+                <img
+                  src={sherryHorseImg}
+                  alt="Sherry horseback riding in California"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ objectPosition: 'center 52%' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute bottom-5 left-5">
+                  <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">Equestrian</p>
+                  <p className="text-white font-serif italic text-xl drop-shadow-lg">In the saddle</p>
+                  <p className="text-white/60 text-sm mt-1 font-sans">California</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* River kayaking — full width closer */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="md:col-span-3"
             >
               <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-xl group">
                 <img
