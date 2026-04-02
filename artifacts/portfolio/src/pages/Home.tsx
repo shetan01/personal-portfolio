@@ -23,7 +23,7 @@ import sherrySUPImg from "@assets/9EE1ACC7-4F92-4BDF-8B14-275460EDE4F5_177508739
 import sherryTahoeImg from "@assets/367A8A4D-B34D-40D5-B2DA-79A3579FC419_1775087395229.JPG";
 import sherryHawaiiImg from "@assets/EC7141D8-FC88-4489-B307-7DA1C6F64237_1775087395230.JPG";
 import sherryKayakImg from "@assets/03C6D390-6E8E-4213-834D-0CB53F29E356_1775087395231.JPG";
-import sherrySnorkelImg from "@assets/1EDD7BF1-63DA-4BBD-AD3B-99B65F12AA5B_1775087395232.JPG";
+import sherrySnorkelImg from "@assets/IMG_7895_1775152400887.JPG";
 import sherryHorseImg from "@assets/9431DB7E-45C0-498D-BE3D-9EBC3B8353A1_1775150365555.JPG";
 
 const formSchema = z.object({
@@ -314,7 +314,7 @@ export default function Home() {
                   src={sherryTahoeImg}
                   alt="Swimming in Lake Tahoe in winter with snow-capped mountains"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: 'center 40%' }}
+                  style={{ objectPosition: 'center 74%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
                 <div className="absolute bottom-7 left-7">
@@ -341,8 +341,8 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-5 left-5">
-                  <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">Nature photography</p>
-                  <p className="text-white font-serif italic text-xl drop-shadow-lg">Above the clouds</p>
+                  <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">Helicopter tour</p>
+                  <p className="text-white font-serif italic text-xl drop-shadow-lg">Kauai from the sky</p>
                   <p className="text-white/60 text-sm mt-1 font-sans">Kauai, Hawaii</p>
                 </div>
               </div>
@@ -358,15 +358,15 @@ export default function Home() {
               <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-xl group">
                 <img
                   src={sherrySnorkelImg}
-                  alt="Snorkeling in Hawaii"
+                  alt="Sherry snorkeling underwater"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: 'center 55%' }}
+                  style={{ objectPosition: 'center 45%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-5 left-5">
                   <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">Snorkeling</p>
-                  <p className="text-white font-serif italic text-xl drop-shadow-lg">Underwater worlds</p>
-                  <p className="text-white/60 text-sm mt-1 font-sans">Maui, Hawaii</p>
+                  <p className="text-white font-serif italic text-xl drop-shadow-lg">Beneath the surface</p>
+                  <p className="text-white/60 text-sm mt-1 font-sans">Hawaii</p>
                 </div>
               </div>
             </motion.div>
@@ -407,7 +407,7 @@ export default function Home() {
                   src={sherryKayakImg}
                   alt="River kayaking through a redwood canyon"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: 'center 42%' }}
+                  style={{ objectPosition: 'center 65%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-7 left-7">
