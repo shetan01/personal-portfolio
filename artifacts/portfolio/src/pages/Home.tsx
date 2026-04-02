@@ -186,10 +186,10 @@ export default function Home() {
                 className="space-y-6 text-lg text-muted-foreground font-sans leading-relaxed"
               >
                 <p>
-                  I have spent my career leading technical initiatives at some of the world's most demanding tech and fintech companies. But my leadership style isn't born in a boardroom—it's shaped by the outdoors.
+                  I have spent 20+ years transforming complex data into strategic intelligence for the world's most demanding tech and fintech companies — Microsoft, Google, Cisco, and Wells Fargo. My edge is sitting at the intersection of deep technical rigor and executive decision-making, and making both sides understand each other.
                 </p>
                 <p>
-                  Whether I am architecting complex software or navigating coastal swells on a paddleboard, I believe in fluid adaptability, clear vision, and finding joy in the challenge.
+                  Whether I am architecting an AI-driven analytics framework for a 5,000-person organization or navigating swells on a paddleboard at dawn, I bring the same discipline: stay curious, move precisely, and find the signal in the noise.
                 </p>
               </motion.div>
               
@@ -202,7 +202,7 @@ export default function Home() {
               >
                 <h3 className="font-sans uppercase tracking-widest text-sm mb-6 text-foreground font-medium">Multifaceted Skillset</h3>
                 <div className="flex flex-wrap gap-3">
-                  {["Enterprise Software", "FinTech Architecture", "Cloud Infrastructure", "Product Leadership", "Ocean Paddling", "Snorkeling", "Water Skiing", "Nature Photography"].map((skill, i) => (
+                  {["Strategic Analytics", "Business Intelligence", "AI-Driven Frameworks", "Executive Advisory", "Data Governance", "GTM Strategy", "Ocean Paddling", "Snorkeling", "Skiing", "Nature Photography"].map((skill, i) => (
                     <span key={i} className="px-4 py-2 border border-border rounded-full text-sm hover:border-primary hover:text-primary transition-colors cursor-default bg-background/50">
                       {skill}
                     </span>
@@ -229,29 +229,35 @@ export default function Home() {
             <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">Professional History</p>
             <h2 className="text-5xl md:text-6xl font-serif mb-4">Building at scale.</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Delivering high-impact solutions across the tech ecosystem, from search algorithms to enterprise networking and financial infrastructure.
+              Twenty years turning data into decisions across Microsoft, Google, Cisco, and Wells Fargo — always at the intersection of technical depth and executive impact.
             </p>
           </motion.div>
 
           <div className="space-y-16">
             {[
               {
-                role: "Principal Product Manager",
+                role: "Strategic Data & Operations Leader",
                 company: "Microsoft",
-                period: "Recent",
-                desc: "Led cross-functional engineering teams in developing enterprise cloud solutions. Bridged the gap between deeply technical infrastructure and intuitive user experiences, driving adoption across Fortune 500 clients."
+                period: "2025 – Present",
+                desc: "Architect the strategic operating cadence for Microsoft's 5,000+ person Bay Area engineering site, deploying AI-driven diagnostic frameworks that modernize how the organization makes decisions. Serve as primary advisor to the Site Engineering Lead — translating fragmented workforce data into a coherent regional roadmap and bridging cross-functional governance across HR, Finance, and Engineering."
               },
               {
-                role: "Senior Engineering Leader",
+                role: "Director, BI Analytics & Center of Excellence",
                 company: "Google",
-                period: "Previous",
-                desc: "Directed initiatives within core infrastructure. Championed scalable, resilient systems while maintaining a culture of psychological safety and creative problem-solving within the team."
+                period: "2021 – 2024",
+                desc: "Built a 9-pillar 'Executive Command Center' dashboard that consolidated metrics across a multi-billion dollar global portfolio — giving CX leadership real-time visibility into performance for the first time. Founded a Global Center of Excellence (CoE) to standardize intelligence reporting worldwide, and deployed predictive models that automated capital planning and budget forecasting at scale."
               },
               {
-                role: "Systems Architect",
-                company: "Cisco",
-                period: "Earlier",
-                desc: "Architected networking software solutions. Focused on reliability, performance, and security in high-stakes environments where downtime is not an option."
+                role: "Principal, Advanced Business Analytics",
+                company: "Wells Fargo",
+                period: "2019 – 2022",
+                desc: "Engineered a 'Customer Trait' behavioral framework that overhauled digital banking segmentation and enabled precision Go-To-Market targeting across channels. Delivered integrated reporting structures that gave executive leadership clear visibility into digital-first product health, and managed the Customer Privacy Program (GDPR/CCPA) ensuring rigorous data governance standards."
+              },
+              {
+                role: "Strategic Program & Data Architecture Leader",
+                company: "Cisco Systems",
+                period: "2004 – 2021",
+                desc: "Spent 17 years building Cisco's data foundation from the ground up. Founded MODS — the Marketing Operations Database — establishing the 'Single Source of Truth' still in active use today. Architected the $1B '7x7 Strategic Growth Framework' to bridge a global revenue gap, and built an early Propensity-to-Buy scoring model years before data science became mainstream practice."
               }
             ].map((job, i) => (
               <motion.div 
@@ -271,10 +277,10 @@ export default function Home() {
                   <p className="text-muted-foreground leading-relaxed text-lg font-sans">
                     {job.desc}
                   </p>
-                  {i !== 2 && (
+                  {i !== 3 && (
                     <div className="absolute left-[-2rem] md:left-[-3rem] top-10 bottom-0 w-px bg-border hidden md:block" />
                   )}
-                  {i !== 2 && (
+                  {i !== 3 && (
                     <div className="absolute bottom-8 left-0 w-12 h-px bg-border md:hidden" />
                   )}
                 </div>
@@ -408,7 +414,7 @@ export default function Home() {
                   src={sherryKayakImg}
                   alt="River kayaking through a redwood canyon"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: 'center 68%' }}
+                  style={{ objectPosition: 'center 82%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-7 left-7">
