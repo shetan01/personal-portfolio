@@ -25,6 +25,7 @@ import sherryHawaiiImg from "@assets/EC7141D8-FC88-4489-B307-7DA1C6F64237_177508
 import sherryKayakImg from "@assets/03C6D390-6E8E-4213-834D-0CB53F29E356_1775087395231.JPG";
 import sherrySnorkelImg from "@assets/IMG_7895_1775152400887.JPG";
 import sherryHorseImg from "@assets/9431DB7E-45C0-498D-BE3D-9EBC3B8353A1_1775150365555.JPG";
+import sherrySkiImg from "@assets/44D7F7AF-F7AA-4058-B0F1-6FF87C86ED46_1775152400887.JPG";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -314,7 +315,7 @@ export default function Home() {
                   src={sherryTahoeImg}
                   alt="Swimming in Lake Tahoe in winter with snow-capped mountains"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: 'center 74%' }}
+                  style={{ objectPosition: 'center 58%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
                 <div className="absolute bottom-7 left-7">
@@ -394,26 +395,49 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* River kayaking — full width closer */}
+            {/* River kayaking — 2 cols */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="md:col-span-3"
+              className="md:col-span-2"
             >
               <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-xl group">
                 <img
                   src={sherryKayakImg}
                   alt="River kayaking through a redwood canyon"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: 'center 65%' }}
+                  style={{ objectPosition: 'center 50%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-7 left-7">
                   <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">River kayaking</p>
-                  <p className="text-white font-serif italic text-2xl drop-shadow-lg">Deeper into the green.</p>
+                  <p className="text-white font-serif italic text-xl drop-shadow-lg">Deeper into the green.</p>
                   <p className="text-white/60 text-sm mt-1 font-sans">Redwood canyons, California</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Skiing — 1 col */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-xl group">
+                <img
+                  src={sherrySkiImg}
+                  alt="Sherry skiing down a snowy slope"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ objectPosition: 'center 52%' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute bottom-5 left-5">
+                  <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">Skiing</p>
+                  <p className="text-white font-serif italic text-xl drop-shadow-lg">Powder days</p>
+                  <p className="text-white/60 text-sm mt-1 font-sans">Sierra Nevada, California</p>
                 </div>
               </div>
             </motion.div>
