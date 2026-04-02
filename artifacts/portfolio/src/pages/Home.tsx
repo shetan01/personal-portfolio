@@ -20,9 +20,9 @@ import heroBgImg from "../assets/images/hero-bg.png";
 import techAbstractImg from "../assets/images/tech-abstract.png";
 import sherrySurfingImg from "@assets/4d4adbb26bc78991d35713d42092b8_1775083276565.JPG";
 import sherrySUPImg from "@assets/9EE1ACC7-4F92-4BDF-8B14-275460EDE4F5_1775087395231.JPG";
-import sherryTahoeImg from "@assets/367A8A4D-B34D-40D5-B2DA-79A3579FC419_1775087395229.JPG";
+import sherryTahoeImg from "@assets/8939EF8D-E05C-44A5-924E-E1E7A7BC4668_1775153626431.JPG";
 import sherryHawaiiImg from "@assets/EC7141D8-FC88-4489-B307-7DA1C6F64237_1775087395230.JPG";
-import sherryKayakImg from "@assets/03C6D390-6E8E-4213-834D-0CB53F29E356_1775087395231.JPG";
+import sherryKayakImg from "@assets/233EBC59-FB47-4E70-8315-7F4A92441749_1775153626431.JPG";
 import sherrySnorkelImg from "@assets/IMG_7895_1775152400887.JPG";
 import sherryHorseImg from "@assets/9431DB7E-45C0-498D-BE3D-9EBC3B8353A1_1775150365555.JPG";
 import sherrySkiImg from "@assets/44D7F7AF-F7AA-4058-B0F1-6FF87C86ED46_1775152400887.JPG";
@@ -315,7 +315,7 @@ export default function Home() {
                   src={sherryTahoeImg}
                   alt="Swimming in Lake Tahoe in winter with snow-capped mountains"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: 'center 58%' }}
+                  style={{ objectPosition: 'center 52%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
                 <div className="absolute bottom-7 left-7">
@@ -408,7 +408,7 @@ export default function Home() {
                   src={sherryKayakImg}
                   alt="River kayaking through a redwood canyon"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: 'center 50%' }}
+                  style={{ objectPosition: 'center 68%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-7 left-7">
