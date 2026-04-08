@@ -456,7 +456,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-5 left-5">
                   <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">
-                    Helicopter tour
+                    Helicopter Exploration
                   </p>
                   <p className="text-white font-serif italic text-xl drop-shadow-lg">
                     Kauai from the sky
