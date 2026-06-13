@@ -344,8 +344,7 @@ export default function Home() {
                 role: "Strategic Business & Data Intelligence Leader",
                 company: "Cisco Systems",
                 period: "2004 – 2021",
-                desc: "Seventeen years at the heart of Cisco's commercial intelligence, where Sales, Marketing, and Finance converge into enterprise strategy. Built the marketing operations infrastructure from its earliest layer, developing the customer behavioral intelligence, GTM performance analytics, and digital journey insights that translated complex market signals into competitive advantage and strategic clarity at scale. Pioneered the '7x7' Strategic Framework with advanced propensity-to-buy modeling that generated $1B in intelligence-led growth. ",
-
+                desc: "17 years at the heart of Cisco's commercial intelligence, where Sales, Marketing, and Finance converge into enterprise strategy. Built the marketing operations infrastructure from its earliest layer, developing the customer behavioral intelligence, GTM performance analytics, and digital journey insights that translated complex market signals into competitive advantage and strategic clarity at scale. Pioneered the '7x7' Strategic Framework with advanced propensity-to-buy modeling that generated $1B in intelligence-led growth.",
               },
             ].map((job, i) => (
               <motion.div
