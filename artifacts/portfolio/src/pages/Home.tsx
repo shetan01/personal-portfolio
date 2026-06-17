@@ -632,7 +632,7 @@ export default function Home() {
                 role: "Director, BI Analytics & Center of Excellence",
                 company: "JLL @Google",
                 period: "2022 – 2024",
-                desc: "Established a Global Center of Excellence to standardize performance storytelling and deployed predictive models for automated capital planning. Directed a 9-pillar 'Executive Command Center' that transformed complex global data into actionable business intelligence, providing leadership with the strategic insights needed to manage a multi-billion dollar portfolio. ",
+                desc: "Directed the analytics and intelligence function for JLL's Global Center of Excellence at Google, architecting the 9-pillar 'Executive Command Center' — a unified BI ecosystem that transformed complex global data into actionable intelligence. Armed executives with the strategic clarity to manage a multi-billion dollar portfolio and make decisions at scale.",
               },
               {
                 role: "Principal, Advanced Business Analytics",
