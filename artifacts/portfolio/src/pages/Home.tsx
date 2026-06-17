@@ -332,13 +332,13 @@ export default function Home() {
             <h2 className="text-5xl md:text-6xl font-serif mb-4">
               What I Build
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed font-sans">
+            <p className="text-muted-foreground text-lg leading-relaxed font-sans">
               Where strategic thinking sparks curiosity, and the hunger to learn ignites the explorer within — I build.
             </p>
           </motion.div>
 
           {/* Two-column layout: cards LEFT, photo RIGHT */}
-          <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="grid md:grid-cols-[55fr_45fr] gap-8 items-stretch">
             {/* LEFT column — all cards stacked */}
             <div>
               {/* Category 1: Apps & Tools */}
@@ -565,8 +565,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="hidden md:block sticky top-24 self-start"
-              style={{ height: "calc(100vh - 8rem)" }}
+              className="hidden md:block"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl h-full">
                 <img
