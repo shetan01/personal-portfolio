@@ -148,7 +148,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9, x: 40 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-          className="hidden lg:block absolute right-16 top-1/2 -translate-y-1/2 z-10 w-72 xl:w-80"
+          className="hidden lg:block absolute right-32 top-1/2 -translate-y-1/2 z-10 w-80 xl:w-96"
         >
           <div className="relative">
             <div className="aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl border-4 border-white/20">
