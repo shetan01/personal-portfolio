@@ -1,11 +1,11 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Github,
   Linkedin,
-  Twitter,
   Mail,
-  ArrowRight,
   ArrowDown,
+  ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -34,6 +34,8 @@ import sherrySnorkelImg from "@assets/IMG_7895_1775152400887.JPG";
 import sherryHorseImg from "@assets/9431DB7E-45C0-498D-BE3D-9EBC3B8353A1_1775150365555.JPG";
 import sherrySkiImg from "@assets/44D7F7AF-F7AA-4058-B0F1-6FF87C86ED46_1775152400887.JPG";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID"; // Replace with your Formspree form ID after signing up at formspree.io
+
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Invalid email address."),
@@ -42,6 +44,7 @@ const formSchema = z.object({
 
 export default function Home() {
   const { toast } = useToast();
+  const [submitting, setSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -52,12 +55,32 @@ export default function Home() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    toast({
-      title: "Message sent",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setSubmitting(true);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (res.ok) {
+        toast({
+          title: "Message sent",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email me directly at sssherry@gmail.com.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const staggerContainer = {
@@ -95,6 +118,9 @@ export default function Home() {
             className="hover:text-primary transition-colors"
           >
             Experience
+          </a>
+          <a href="#build" className="hover:text-primary transition-colors">
+            Build
           </a>
           <a href="#passions" className="hover:text-primary transition-colors">
             Passions
@@ -160,7 +186,7 @@ export default function Home() {
               variants={fadeInUp}
               className="text-lg md:text-xl text-foreground/80 max-w-xl mb-12 leading-relaxed font-sans"
             >
-              I drive strategic business transformation and data-led innovation by day and paddle into
+              I drive strategic business transformation through data intelligence and AI-native innovation by day and paddle into
               the ocean at dawn. Bringing warmth, creativity, and relentless
               precision to everything I do.
             </motion.p>
@@ -285,6 +311,255 @@ export default function Home() {
                 </div>
               </motion.div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What I Build Section */}
+      <section
+        id="build"
+        className="py-32 px-6 md:px-12 lg:px-24 bg-background relative"
+      >
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16 md:mb-20"
+          >
+            <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">
+              What I Build
+            </p>
+            <h2 className="text-5xl md:text-6xl font-serif mb-6">
+              Curiosity, made tangible.
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed font-sans">
+              Where strategic thinking sparks curiosity, and the hunger to learn ignites the explorer within — I build.
+            </p>
+          </motion.div>
+
+          {/* Category 1: Apps & Tools */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mb-20"
+          >
+            <h3 className="font-serif text-3xl md:text-4xl mb-3">
+              🛠️ Apps & Tools I Built with AI
+            </h3>
+            <p className="text-muted-foreground text-base mb-10 font-sans">
+              Simple, powerful tools for life and work — built for personal moments and professional operations.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  name: "FinanceSmart",
+                  desc: "Personal finance tracker with AI-powered insights",
+                  href: "https://shetan01.github.io/finance-tracker",
+                },
+                {
+                  name: "TravelSmart",
+                  desc: "AI-powered personalized travel itineraries",
+                  href: "https://shetan01.github.io/travelsmart",
+                },
+                {
+                  name: "GuestPass Registration",
+                  desc: "Guest management with real-time database",
+                  href: "https://guestpass-app.vercel.app",
+                },
+                {
+                  name: "Event Budget Planner",
+                  desc: "Multi-day event cost calculator",
+                  href: "https://shetan01.github.io/event-budget",
+                },
+                {
+                  name: "Graduation Party Planner",
+                  desc: "Plan every detail of a milestone celebration",
+                  href: "https://shetan01.github.io/graduation-planner",
+                },
+                {
+                  name: "Wedding Budget Planner",
+                  desc: "Track every cost of your perfect day, together",
+                  href: "https://shetan01.github.io/wedding-planner",
+                },
+                {
+                  name: "Birthday Party Planner",
+                  desc: "Because every birthday deserves to be unforgettable",
+                  href: "https://shetan01.github.io/birthday-planner",
+                },
+              ].map((app, i) => (
+                <motion.a
+                  key={i}
+                  href={app.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.06 }}
+                  className="group flex flex-col justify-between p-6 rounded-2xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
+                >
+                  <div>
+                    <div className="flex items-start justify-between gap-2 mb-3">
+                      <h4 className="font-serif text-xl group-hover:text-primary transition-colors">
+                        {app.name}
+                      </h4>
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 mt-1 transition-colors" />
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed font-sans">
+                      {app.desc}
+                    </p>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Category 2: AI Agents */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <h3 className="font-serif text-3xl md:text-4xl mb-3">
+              🤖 AI Agents & Agentic Systems
+            </h3>
+            <p className="text-muted-foreground text-base mb-10 font-sans">
+              Autonomous intelligence built for organizations — detecting signals, surfacing insights, and driving action across enterprise functions.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                {
+                  name: "Workforce & HR Intelligence Agent",
+                  desc: "Detects at-risk, star, and struggling teams from fragmented HR signals",
+                  href: "https://www.linkedin.com/pulse/i-argued-most-companies-ai-decorated-built-agent-prove-sherry-tan-wbnsc/",
+                  comingSoon: false,
+                },
+                {
+                  name: "Marketing & Sales Intelligence Agent",
+                  desc: "Coming Soon",
+                  href: null,
+                  comingSoon: true,
+                },
+                {
+                  name: "Finance Intelligence Agent",
+                  desc: "Coming Soon",
+                  href: null,
+                  comingSoon: true,
+                },
+                {
+                  name: "BoardPulse",
+                  desc: "The agent that coordinates the agents. Executive intelligence, unified — Coming Soon",
+                  href: null,
+                  comingSoon: true,
+                },
+              ].map((agent, i) => {
+                const content = (
+                  <>
+                    <div className="flex items-start justify-between gap-2 mb-3">
+                      <h4 className="font-serif text-xl group-hover:text-primary transition-colors">
+                        {agent.name}
+                      </h4>
+                      {!agent.comingSoon && (
+                        <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 mt-1 transition-colors" />
+                      )}
+                      {agent.comingSoon && (
+                        <span className="text-xs font-sans font-medium tracking-widest uppercase text-muted-foreground border border-border rounded-full px-3 py-1 shrink-0">
+                          Soon
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed font-sans">
+                      {agent.desc}
+                    </p>
+                  </>
+                );
+                return agent.href ? (
+                  <motion.a
+                    key={i}
+                    href={agent.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.06 }}
+                    className="group flex flex-col p-6 rounded-2xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
+                  >
+                    {content}
+                  </motion.a>
+                ) : (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.06 }}
+                    className="group flex flex-col p-6 rounded-2xl border border-border bg-card opacity-70"
+                  >
+                    {content}
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Writing With Receipts Section */}
+      <section className="py-32 px-6 md:px-12 lg:px-24 bg-card border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">
+              Published Thinking
+            </p>
+            <h2 className="text-5xl md:text-6xl font-serif mb-6">
+              Writing With Receipts
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed font-sans">
+              I don't just write about AI transformation. I build the proof.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Your Company Is Not AI-Native. Here's What That Actually Means.",
+                href: "https://www.linkedin.com/pulse/your-company-ai-native-heres-what-actually-means-sherry-tan-gpa9c",
+              },
+              {
+                title: "I Argued Most Companies Are AI-Decorated. Then I Built the Agent to Prove It.",
+                href: "https://www.linkedin.com/pulse/i-argued-most-companies-ai-decorated-built-agent-prove-sherry-tan-wbnsc/",
+              },
+            ].map((article, i) => (
+              <motion.a
+                key={i}
+                href={article.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group flex flex-col justify-between p-8 rounded-2xl border border-border bg-background hover:border-primary hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="font-serif text-2xl md:text-3xl leading-snug group-hover:text-primary transition-colors mb-6">
+                  {article.title}
+                </h3>
+                <div className="flex items-center gap-2 text-sm font-sans font-medium text-primary uppercase tracking-widest">
+                  Read on LinkedIn
+                  <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </motion.a>
+            ))}
           </div>
         </div>
       </section>
@@ -623,19 +898,17 @@ export default function Home() {
 
                 <div className="flex gap-4 pt-8">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/sherry-tan-732b0314"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all shadow-sm"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="#"
-                    className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all shadow-sm"
-                  >
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="#"
+                    href="https://github.com/shetan01"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all shadow-sm"
                   >
                     <Github className="w-5 h-5" />
@@ -712,9 +985,10 @@ export default function Home() {
                   />
                   <Button
                     type="submit"
+                    disabled={submitting}
                     className="w-full py-6 text-base rounded-full mt-4"
                   >
-                    Send Message
+                    {submitting ? "Sending…" : "Send Message"}
                   </Button>
                 </form>
               </Form>
