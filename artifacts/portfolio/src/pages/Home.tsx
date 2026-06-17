@@ -319,7 +319,7 @@ export default function Home() {
       {/* What I Build Section */}
       <section
         id="build"
-        className="py-32 px-6 md:px-12 lg:px-24 bg-card relative"
+        className="pt-12 pb-32 px-6 md:px-12 lg:px-24 bg-card relative"
       >
         <div className="max-w-7xl mx-auto">
           {/* Centered header — matches Professional History */}
