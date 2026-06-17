@@ -525,10 +525,7 @@ export default function Home() {
                 <h3 className="font-sans text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">
                   ✍️ Writing With Receipts
                 </h3>
-                <p className="text-muted-foreground text-xs mb-3 font-sans">
-                  I don't just write about AI transformation. I build the proof.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 mt-3">
                   {[
                     {
                       title: "Your Company Is Not AI-Native. Here's What That Actually Means.",
