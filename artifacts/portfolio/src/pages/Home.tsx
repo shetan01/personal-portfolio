@@ -332,10 +332,11 @@ export default function Home() {
             <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">
               What I Build
             </p>
-            <h2 className="text-5xl md:text-6xl font-serif mb-4">
-              Curiosity made tangible.
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-8 text-foreground">
+              Sparked by curiosity. <br />
+              Tangible by design.
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-primary text-xl italic max-w-2xl mx-auto mt-6 mb-2">
               Where strategic thinking sparks curiosity, and the hunger to learn ignites the explorer within — I build.
             </p>
           </motion.div>
