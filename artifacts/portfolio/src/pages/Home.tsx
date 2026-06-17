@@ -615,7 +615,7 @@ export default function Home() {
               Building at scale.
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Twenty years turning data into decisions across Microsoft, Google,
+              Twenty years turning data and AI into decisions across Microsoft, Google,
               Cisco, and Wells Fargo — always at the intersection of business strategy and executive decision-making.
             </p>
           </motion.div>
@@ -626,7 +626,7 @@ export default function Home() {
                 role: "Strategic Data & Operations Leader",
                 company: "Microsoft",
                 period: "2025 – Present",
-                desc: "Orchestrated the strategic operating cadence for a 5,000+ person engineering site, modernizing organizational decision-making through high-impact diagnostic frameworks. Served as a principal strategic advisor, architecting a data-backed regional roadmap and unifying cross-functional governance across the organization. ",
+                desc: "Anchored within the Office of the Site Leader for a 5,000+ person AI engineering hub, providing the strategic intelligence and AI-driven advisory frameworks that informed executive decisions on organizational health, AI adoption, and site-wide governance. Translated complex workforce, operational, and AI signals into clear leadership direction across a dynamic, high-stakes environment.",
               },
               {
                 role: "Director, BI Analytics & Center of Excellence",
