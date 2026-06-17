@@ -35,7 +35,7 @@ import sherryHorseImg from "@assets/9431DB7E-45C0-498D-BE3D-9EBC3B8353A1_1775150
 import sherrySkiImg from "@assets/44D7F7AF-F7AA-4058-B0F1-6FF87C86ED46_1775152400887.JPG";
 import goldenSupImg from "../assets/images/golden-sup.jpg";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID"; // Replace with your Formspree form ID after signing up at formspree.io
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzdqqonj";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
