@@ -330,9 +330,6 @@ export default function Home() {
             <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">
               What I Build
             </p>
-            <h2 className="text-5xl md:text-6xl font-serif mb-6">
-              Curiosity, made tangible.
-            </h2>
             <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed font-sans">
               Where strategic thinking sparks curiosity, and the hunger to learn ignites the explorer within — I build.
             </p>
@@ -468,7 +465,7 @@ export default function Home() {
                       )}
                       {agent.comingSoon && (
                         <span className="text-xs font-sans font-medium tracking-widest uppercase text-muted-foreground border border-border rounded-full px-3 py-1 shrink-0">
-                          Soon
+                          Coming Soon
                         </span>
                       )}
                     </div>
@@ -518,9 +515,6 @@ export default function Home() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">
-              Published Thinking
-            </p>
             <h2 className="text-5xl md:text-6xl font-serif mb-6">
               Writing With Receipts
             </h2>
