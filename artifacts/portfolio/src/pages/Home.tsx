@@ -33,6 +33,7 @@ import sherryKayakImg from "@assets/233EBC59-FB47-4E70-8315-7F4A92441749_1775153
 import sherrySnorkelImg from "@assets/IMG_7895_1775152400887.JPG";
 import sherryHorseImg from "@assets/9431DB7E-45C0-498D-BE3D-9EBC3B8353A1_1775150365555.JPG";
 import sherrySkiImg from "@assets/44D7F7AF-F7AA-4058-B0F1-6FF87C86ED46_1775152400887.JPG";
+import goldenSupImg from "../assets/images/golden-sup.jpg";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID"; // Replace with your Formspree form ID after signing up at formspree.io
 
@@ -318,14 +319,15 @@ export default function Home() {
       {/* What I Build Section */}
       <section
         id="build"
-        className="py-32 px-6 md:px-12 lg:px-24 bg-background relative"
+        className="py-24 px-6 md:px-12 lg:px-24 bg-background relative"
       >
         <div className="max-w-7xl mx-auto">
+          {/* Full-width title + tagline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16 md:mb-20"
+            className="mb-12"
           >
             <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">
               What I Build
@@ -335,225 +337,253 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Category 1: Apps & Tools */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="mb-20"
-          >
-            <h3 className="font-serif text-3xl md:text-4xl mb-3">
-              🛠️ Apps & Tools I Built with AI
-            </h3>
-            <p className="text-muted-foreground text-base mb-10 font-sans">
-              Simple, powerful tools for life and work — built for personal moments and professional operations.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                {
-                  name: "FinanceSmart",
-                  desc: "Personal finance tracker with AI-powered insights",
-                  href: "https://shetan01.github.io/finance-tracker",
-                },
-                {
-                  name: "TravelSmart",
-                  desc: "AI-powered personalized travel itineraries",
-                  href: "https://shetan01.github.io/travelsmart",
-                },
-                {
-                  name: "GuestPass Registration",
-                  desc: "Guest management with real-time database",
-                  href: "https://guestpass-app.vercel.app",
-                },
-                {
-                  name: "Event Budget Planner",
-                  desc: "Multi-day event cost calculator",
-                  href: "https://shetan01.github.io/event-budget",
-                },
-                {
-                  name: "Graduation Party Planner",
-                  desc: "Plan every detail of a milestone celebration",
-                  href: "https://shetan01.github.io/graduation-planner",
-                },
-                {
-                  name: "Wedding Budget Planner",
-                  desc: "Track every cost of your perfect day, together",
-                  href: "https://shetan01.github.io/wedding-planner",
-                },
-                {
-                  name: "Birthday Party Planner",
-                  desc: "Because every birthday deserves to be unforgettable",
-                  href: "https://shetan01.github.io/birthday-planner",
-                },
-              ].map((app, i) => (
-                <motion.a
-                  key={i}
-                  href={app.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.06 }}
-                  className="group flex flex-col justify-between p-6 rounded-2xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
-                >
-                  <div>
-                    <div className="flex items-start justify-between gap-2 mb-3">
-                      <h4 className="font-serif text-xl group-hover:text-primary transition-colors">
-                        {app.name}
-                      </h4>
-                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 mt-1 transition-colors" />
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed font-sans">
-                      {app.desc}
-                    </p>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Category 2: AI Agents */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <h3 className="font-serif text-3xl md:text-4xl mb-3">
-              🤖 AI Agents & Agentic Systems
-            </h3>
-            <p className="text-muted-foreground text-base mb-10 font-sans">
-              Autonomous intelligence built for organizations — detecting signals, surfacing insights, and driving action across enterprise functions.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                {
-                  name: "Workforce & HR Intelligence Agent",
-                  desc: "Detects at-risk, star, and struggling teams from fragmented HR signals",
-                  href: "https://www.linkedin.com/pulse/i-argued-most-companies-ai-decorated-built-agent-prove-sherry-tan-wbnsc/",
-                  comingSoon: false,
-                },
-                {
-                  name: "Marketing & Sales Intelligence Agent",
-                  desc: "Coming Soon",
-                  href: null,
-                  comingSoon: true,
-                },
-                {
-                  name: "Finance Intelligence Agent",
-                  desc: "Coming Soon",
-                  href: null,
-                  comingSoon: true,
-                },
-                {
-                  name: "BoardPulse",
-                  desc: "The agent that coordinates the agents. Executive intelligence, unified — Coming Soon",
-                  href: null,
-                  comingSoon: true,
-                },
-              ].map((agent, i) => {
-                const content = (
-                  <>
-                    <div className="flex items-start justify-between gap-2 mb-3">
-                      <h4 className="font-serif text-xl group-hover:text-primary transition-colors">
-                        {agent.name}
-                      </h4>
-                      {!agent.comingSoon && (
-                        <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 mt-1 transition-colors" />
-                      )}
-                      {agent.comingSoon && (
-                        <span className="text-xs font-sans font-medium tracking-widest uppercase text-muted-foreground border border-border rounded-full px-3 py-1 shrink-0">
-                          Coming Soon
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed font-sans">
-                      {agent.desc}
-                    </p>
-                  </>
-                );
-                return agent.href ? (
-                  <motion.a
-                    key={i}
-                    href={agent.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.06 }}
-                    className="group flex flex-col p-6 rounded-2xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
-                  >
-                    {content}
-                  </motion.a>
-                ) : (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.06 }}
-                    className="group flex flex-col p-6 rounded-2xl border border-border bg-card opacity-70"
-                  >
-                    {content}
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Writing With Receipts Section */}
-      <section className="py-32 px-6 md:px-12 lg:px-24 bg-card border-y border-border">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h2 className="text-5xl md:text-6xl font-serif mb-6">
-              Writing With Receipts
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed font-sans">
-              I don't just write about AI transformation. I build the proof.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                title: "Your Company Is Not AI-Native. Here's What That Actually Means.",
-                href: "https://www.linkedin.com/pulse/your-company-ai-native-heres-what-actually-means-sherry-tan-gpa9c",
-              },
-              {
-                title: "I Argued Most Companies Are AI-Decorated. Then I Built the Agent to Prove It.",
-                href: "https://www.linkedin.com/pulse/i-argued-most-companies-ai-decorated-built-agent-prove-sherry-tan-wbnsc/",
-              },
-            ].map((article, i) => (
-              <motion.a
-                key={i}
-                href={article.href}
-                target="_blank"
-                rel="noopener noreferrer"
+          {/* Two-column layout: cards LEFT, photo RIGHT */}
+          <div className="grid md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-start">
+            {/* LEFT column — all cards stacked */}
+            <div>
+              {/* Category 1: Apps & Tools */}
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group flex flex-col justify-between p-8 rounded-2xl border border-border bg-background hover:border-primary hover:shadow-xl transition-all duration-300"
+                transition={{ delay: 0.1 }}
+                className="mb-12"
               >
-                <h3 className="font-serif text-2xl md:text-3xl leading-snug group-hover:text-primary transition-colors mb-6">
-                  {article.title}
+                <h3 className="font-serif text-xl md:text-2xl mb-2">
+                  🛠️ Apps & Tools I Built with AI
                 </h3>
-                <div className="flex items-center gap-2 text-sm font-sans font-medium text-primary uppercase tracking-widest">
-                  Read on LinkedIn
-                  <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <p className="text-muted-foreground text-sm mb-6 font-sans">
+                  Simple, powerful tools for life and work — built for personal moments and professional operations.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                  {[
+                    {
+                      name: "FinanceSmart",
+                      desc: "Personal finance tracker with AI-powered insights",
+                      href: "https://shetan01.github.io/finance-tracker",
+                    },
+                    {
+                      name: "TravelSmart",
+                      desc: "AI-powered personalized travel itineraries",
+                      href: "https://shetan01.github.io/travelsmart",
+                    },
+                    {
+                      name: "GuestPass Registration",
+                      desc: "Guest management with real-time database",
+                      href: "https://guestpass-app.vercel.app",
+                    },
+                    {
+                      name: "Event Budget Planner",
+                      desc: "Multi-day event cost calculator",
+                      href: "https://shetan01.github.io/event-budget",
+                    },
+                    {
+                      name: "Graduation Party Planner",
+                      desc: "Plan every detail of a milestone celebration",
+                      href: "https://shetan01.github.io/graduation-planner",
+                    },
+                    {
+                      name: "Wedding Budget Planner",
+                      desc: "Track every cost of your perfect day, together",
+                      href: "https://shetan01.github.io/wedding-planner",
+                    },
+                    {
+                      name: "Birthday Party Planner",
+                      desc: "Because every birthday deserves to be unforgettable",
+                      href: "https://shetan01.github.io/birthday-planner",
+                    },
+                  ].map((app, i) => (
+                    <motion.a
+                      key={i}
+                      href={app.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.06 }}
+                      className="group flex flex-col justify-between px-4 py-3 rounded-xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
+                    >
+                      <div>
+                        <div className="flex items-start justify-between gap-2 mb-1.5">
+                          <h4 className="font-serif text-base group-hover:text-primary transition-colors">
+                            {app.name}
+                          </h4>
+                          <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0 mt-0.5 transition-colors" />
+                        </div>
+                        <p className="text-muted-foreground text-xs leading-relaxed font-sans">
+                          {app.desc}
+                        </p>
+                      </div>
+                    </motion.a>
+                  ))}
                 </div>
-              </motion.a>
-            ))}
+              </motion.div>
+
+              {/* Category 2: AI Agents */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="mb-12"
+              >
+                <h3 className="font-serif text-xl md:text-2xl mb-2">
+                  🤖 AI Agents & Agentic Systems
+                </h3>
+                <p className="text-muted-foreground text-sm mb-6 font-sans">
+                  Autonomous intelligence built for organizations — detecting signals, surfacing insights, and driving action across enterprise functions.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {[
+                    {
+                      name: "Workforce & HR Intelligence Agent",
+                      desc: "Detects at-risk, star, and struggling teams from fragmented HR signals",
+                      href: "https://www.linkedin.com/pulse/i-argued-most-companies-ai-decorated-built-agent-prove-sherry-tan-wbnsc/",
+                      comingSoon: false,
+                    },
+                    {
+                      name: "Marketing & Sales Intelligence Agent",
+                      desc: "Coming Soon",
+                      href: null,
+                      comingSoon: true,
+                    },
+                    {
+                      name: "Finance Intelligence Agent",
+                      desc: "Coming Soon",
+                      href: null,
+                      comingSoon: true,
+                    },
+                    {
+                      name: "BoardPulse",
+                      desc: "The agent that coordinates the agents. Executive intelligence, unified — Coming Soon",
+                      href: null,
+                      comingSoon: true,
+                    },
+                  ].map((agent, i) => {
+                    const content = (
+                      <>
+                        <div className="flex items-start justify-between gap-2 mb-1.5">
+                          <h4 className="font-serif text-base group-hover:text-primary transition-colors">
+                            {agent.name}
+                          </h4>
+                          {!agent.comingSoon && (
+                            <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0 mt-0.5 transition-colors" />
+                          )}
+                          {agent.comingSoon && (
+                            <span className="text-[10px] font-sans font-medium tracking-widest uppercase text-muted-foreground border border-border rounded-full px-2 py-0.5 shrink-0">
+                              Coming Soon
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-muted-foreground text-xs leading-relaxed font-sans">
+                          {agent.desc}
+                        </p>
+                      </>
+                    );
+                    return agent.href ? (
+                      <motion.a
+                        key={i}
+                        href={agent.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.06 }}
+                        className="group flex flex-col px-4 py-3 rounded-xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
+                      >
+                        {content}
+                      </motion.a>
+                    ) : (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.06 }}
+                        className="group flex flex-col px-4 py-3 rounded-xl border border-border bg-card opacity-70"
+                      >
+                        {content}
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Writing With Receipts */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+              >
+                <h3 className="font-serif text-xl md:text-2xl mb-2">
+                  ✍️ Writing With Receipts
+                </h3>
+                <p className="text-muted-foreground text-sm mb-6 font-sans">
+                  I don't just write about AI transformation. I build the proof.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {[
+                    {
+                      title: "Your Company Is Not AI-Native. Here's What That Actually Means.",
+                      href: "https://www.linkedin.com/pulse/your-company-ai-native-heres-what-actually-means-sherry-tan-gpa9c",
+                    },
+                    {
+                      title: "I Argued Most Companies Are AI-Decorated. Then I Built the Agent to Prove It.",
+                      href: "https://www.linkedin.com/pulse/i-argued-most-companies-ai-decorated-built-agent-prove-sherry-tan-wbnsc/",
+                    },
+                  ].map((article, i) => (
+                    <motion.a
+                      key={i}
+                      href={article.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.06 }}
+                      className="group flex flex-col justify-between px-4 py-3 rounded-xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
+                    >
+                      <h4 className="font-serif text-base leading-snug group-hover:text-primary transition-colors mb-3">
+                        {article.title}
+                      </h4>
+                      <div className="flex items-center gap-1.5 text-xs font-sans font-medium text-primary uppercase tracking-widest">
+                        Read on LinkedIn
+                        <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </motion.a>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* RIGHT column — golden hour SUP photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="hidden md:block sticky top-24 w-72 lg:w-80"
+            >
+              <div className="aspect-[3/5] relative overflow-hidden rounded-2xl shadow-2xl">
+                <img
+                  src={goldenSupImg}
+                  alt="Sherry paddleboarding at golden hour sunset"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <div className="absolute bottom-5 left-5">
+                  <p className="text-white/70 text-xs uppercase tracking-widest mb-1 font-sans">
+                    Golden hour
+                  </p>
+                  <p className="text-white font-serif italic text-lg drop-shadow-lg">
+                    Paddle into the light.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
