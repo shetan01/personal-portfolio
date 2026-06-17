@@ -329,16 +329,16 @@ export default function Home() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">
+            <h2 className="text-5xl md:text-6xl font-serif mb-4">
               What I Build
-            </p>
+            </h2>
             <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed font-sans">
               Where strategic thinking sparks curiosity, and the hunger to learn ignites the explorer within — I build.
             </p>
           </motion.div>
 
           {/* Two-column layout: cards LEFT, photo RIGHT */}
-          <div className="grid md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-start">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* LEFT column — all cards stacked */}
             <div>
               {/* Category 1: Apps & Tools */}
@@ -347,15 +347,15 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="mb-12"
+                className="mb-5"
               >
-                <h3 className="font-serif text-xl md:text-2xl mb-2">
+                <h3 className="font-sans text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">
                   🛠️ Apps & Tools I Built with AI
                 </h3>
-                <p className="text-muted-foreground text-sm mb-6 font-sans">
+                <p className="text-muted-foreground text-xs mb-3 font-sans">
                   Simple, powerful tools for life and work — built for personal moments and professional operations.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {[
                     {
                       name: "FinanceSmart",
@@ -402,16 +402,16 @@ export default function Home() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.06 }}
-                      className="group flex flex-col justify-between px-4 py-3 rounded-xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
+                      className="group flex flex-col justify-between px-3 py-2 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all duration-300"
                     >
                       <div>
-                        <div className="flex items-start justify-between gap-2 mb-1.5">
-                          <h4 className="font-serif text-base group-hover:text-primary transition-colors">
+                        <div className="flex items-start justify-between gap-2 mb-0.5">
+                          <h4 className="font-sans text-sm font-medium group-hover:text-primary transition-colors">
                             {app.name}
                           </h4>
-                          <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0 mt-0.5 transition-colors" />
+                          <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary shrink-0 mt-0.5 transition-colors" />
                         </div>
-                        <p className="text-muted-foreground text-xs leading-relaxed font-sans">
+                        <p className="text-muted-foreground text-[11px] leading-snug font-sans">
                           {app.desc}
                         </p>
                       </div>
@@ -426,15 +426,15 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="mb-12"
+                className="mb-5"
               >
-                <h3 className="font-serif text-xl md:text-2xl mb-2">
+                <h3 className="font-sans text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">
                   🤖 AI Agents & Agentic Systems
                 </h3>
-                <p className="text-muted-foreground text-sm mb-6 font-sans">
+                <p className="text-muted-foreground text-xs mb-3 font-sans">
                   Autonomous intelligence built for organizations — detecting signals, surfacing insights, and driving action across enterprise functions.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {[
                     {
                       name: "Workforce & HR Intelligence Agent",
@@ -463,12 +463,12 @@ export default function Home() {
                   ].map((agent, i) => {
                     const content = (
                       <>
-                        <div className="flex items-start justify-between gap-2 mb-1.5">
-                          <h4 className="font-serif text-base group-hover:text-primary transition-colors">
+                        <div className="flex items-start justify-between gap-2 mb-0.5">
+                          <h4 className="font-sans text-sm font-medium group-hover:text-primary transition-colors">
                             {agent.name}
                           </h4>
                           {!agent.comingSoon && (
-                            <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0 mt-0.5 transition-colors" />
+                            <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary shrink-0 mt-0.5 transition-colors" />
                           )}
                           {agent.comingSoon && (
                             <span className="text-[10px] font-sans font-medium tracking-widest uppercase text-muted-foreground border border-border rounded-full px-2 py-0.5 shrink-0">
@@ -476,7 +476,7 @@ export default function Home() {
                             </span>
                           )}
                         </div>
-                        <p className="text-muted-foreground text-xs leading-relaxed font-sans">
+                        <p className="text-muted-foreground text-[11px] leading-snug font-sans">
                           {agent.desc}
                         </p>
                       </>
@@ -491,7 +491,7 @@ export default function Home() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.06 }}
-                        className="group flex flex-col px-4 py-3 rounded-xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
+                        className="group flex flex-col px-3 py-2 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all duration-300"
                       >
                         {content}
                       </motion.a>
@@ -502,7 +502,7 @@ export default function Home() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.06 }}
-                        className="group flex flex-col px-4 py-3 rounded-xl border border-border bg-card opacity-70"
+                        className="group flex flex-col px-3 py-2 rounded-lg border border-border bg-card opacity-70"
                       >
                         {content}
                       </motion.div>
@@ -518,13 +518,13 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <h3 className="font-serif text-xl md:text-2xl mb-2">
+                <h3 className="font-sans text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">
                   ✍️ Writing With Receipts
                 </h3>
-                <p className="text-muted-foreground text-sm mb-6 font-sans">
+                <p className="text-muted-foreground text-xs mb-3 font-sans">
                   I don't just write about AI transformation. I build the proof.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {[
                     {
                       title: "Your Company Is Not AI-Native. Here's What That Actually Means.",
@@ -544,14 +544,14 @@ export default function Home() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.06 }}
-                      className="group flex flex-col justify-between px-4 py-3 rounded-xl border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
+                      className="group flex flex-col justify-between px-3 py-2 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all duration-300"
                     >
-                      <h4 className="font-serif text-base leading-snug group-hover:text-primary transition-colors mb-3">
+                      <h4 className="font-sans text-sm font-medium leading-snug group-hover:text-primary transition-colors mb-2">
                         {article.title}
                       </h4>
-                      <div className="flex items-center gap-1.5 text-xs font-sans font-medium text-primary uppercase tracking-widest">
+                      <div className="flex items-center gap-1.5 text-[10px] font-sans font-medium text-primary uppercase tracking-widest">
                         Read on LinkedIn
-                        <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                        <ExternalLink className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </motion.a>
                   ))}
@@ -565,9 +565,10 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="hidden md:block sticky top-24 w-72 lg:w-80"
+              className="hidden md:block sticky top-24 self-start"
+              style={{ height: "calc(100vh - 8rem)" }}
             >
-              <div className="aspect-[3/5] relative overflow-hidden rounded-2xl shadow-2xl">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl h-full">
                 <img
                   src={goldenSupImg}
                   alt="Sherry paddleboarding at golden hour sunset"
