@@ -319,26 +319,29 @@ export default function Home() {
       {/* What I Build Section */}
       <section
         id="build"
-        className="py-24 px-6 md:px-12 lg:px-24 bg-background relative"
+        className="py-32 px-6 md:px-12 lg:px-24 bg-card relative"
       >
         <div className="max-w-7xl mx-auto">
-          {/* Full-width title + tagline */}
+          {/* Centered header — matches Professional History */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
+            className="text-center mb-24"
           >
-            <h2 className="text-5xl md:text-6xl font-serif mb-4">
+            <p className="text-primary font-medium tracking-widest uppercase mb-4 text-sm">
               What I Build
+            </p>
+            <h2 className="text-5xl md:text-6xl font-serif mb-4">
+              Curiosity made tangible.
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed font-sans">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Where strategic thinking sparks curiosity, and the hunger to learn ignites the explorer within — I build.
             </p>
           </motion.div>
 
           {/* Two-column layout: cards LEFT, photo RIGHT */}
-          <div className="grid md:grid-cols-[55fr_45fr] gap-8 items-stretch">
+          <div className="grid md:grid-cols-[60fr_40fr] gap-8 items-stretch">
             {/* LEFT column — all cards stacked */}
             <div>
               {/* Category 1: Apps & Tools */}
