@@ -265,7 +265,7 @@ export default function Home() {
               >
                 <p>
                   I have spent 20+ years transforming complex data into
-                  strategic intelligence for the world's most demanding tech and
+                  strategic intelligence and AI-powered systems for the world's most demanding tech and
                   fintech companies — Microsoft, Google, Cisco, and Wells Fargo.
                   My edge is sitting at the intersection of business strategy and 
                   executive decision-making, ensuring both sides of the organization speak the same language.
