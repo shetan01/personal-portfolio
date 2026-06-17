@@ -638,7 +638,7 @@ export default function Home() {
                 role: "Principal, Advanced Business Analytics",
                 company: "Wells Fargo",
                 period: "2021 – 2022",
-                desc: "Strategized a 'Customer Trait' behavioral framework that overhauled digital banking segmentation and enabled precision Go-To-Market targeting across channels. Delivered integrated reporting structures that gave executive leadership clear visibility into digital-first product health.",
+                desc: "Designed and developed the 'Customer Trait' behavioral framework that overhauled digital banking segmentation and enabled precision Go-To-Market targeting across channels. Delivered curated intelligence that sharpened leadership's view of digital-first product health.",
               },
               {
                 role: "Strategic Business & Data Intelligence Leader",
