@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   Github,
   Linkedin,
-  Mail,
   ArrowDown,
   ExternalLink,
 } from "lucide-react";
@@ -911,17 +910,7 @@ export default function Home() {
               </p>
 
               <div className="space-y-6">
-                <a
-                  href="mailto:sssherry@gmail.com"
-                  className="flex items-center gap-4 text-xl hover:text-primary transition-colors group w-fit font-serif"
-                >
-                  <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:border-primary group-hover:bg-primary/5 transition-all">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  sssherry@gmail.com
-                </a>
-
-                <div className="flex gap-4 pt-8">
+                <div className="flex gap-4">
                   <a
                     href="https://www.linkedin.com/in/sherry-tan-732b0314"
                     target="_blank"
