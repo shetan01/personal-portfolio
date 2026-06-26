@@ -361,6 +361,21 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {[
                     {
+                      name: "MeetingSmart",
+                      desc: "Calculate the real cost of your meetings. Because every meeting has a price tag. 😮💸",
+                      href: "https://shetan01.github.io/meetingsmart",
+                    },
+                    {
+                      name: "MeetingFit",
+                      desc: "Discover the health impact of your meeting culture. Because your meetings have a health cost too. 🏃‍♀️",
+                      href: "https://shetan01.github.io/meetingfit",
+                    },
+                    {
+                      name: "JobAppSmart",
+                      desc: "AI-powered job application assistant. Match your resume to any job description and generate a tailored cover letter.",
+                      href: "https://shetan01.github.io/jobappsmart",
+                    },
+                    {
                       name: "FinanceSmart",
                       desc: "Personal finance tracker with AI-powered insights",
                       href: "https://shetan01.github.io/finance-tracker",
@@ -565,7 +580,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="hidden md:block"
+              className="hidden md:block h-full"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl h-full">
                 <img
