@@ -318,9 +318,9 @@ export default function Home() {
       {/* What I Build Section */}
       <section
         id="build"
-        className="pt-12 pb-32 px-6 md:px-12 lg:px-24 bg-card relative"
+        className="pt-12 pb-32 bg-card relative"
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
           {/* Centered header — matches Professional History */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -339,11 +339,12 @@ export default function Home() {
               Where strategic thinking sparks curiosity, and the hunger to learn ignites the explorer within — I build.
             </p>
           </motion.div>
+        </div>
 
-          {/* Two-column layout: cards LEFT, photo RIGHT */}
-          <div className="grid md:grid-cols-[60fr_40fr] gap-8 items-stretch">
+        {/* Two-column layout: cards LEFT, photo RIGHT */}
+        <div className="grid md:grid-cols-[60fr_40fr] gap-8 items-stretch">
             {/* LEFT column — all cards stacked */}
-            <div>
+            <div className="px-6 md:pl-12 md:pr-0 lg:pl-24">
               {/* Category 1: Apps & Tools */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -582,7 +583,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="hidden md:block h-full"
             >
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl h-full">
+              <div className="relative overflow-hidden rounded-l-2xl shadow-2xl h-full">
                 <img
                   src={goldenSupImg}
                   alt="Sherry paddleboarding at golden hour sunset"
@@ -600,7 +601,6 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-        </div>
       </section>
 
       {/* Experience Section */}
