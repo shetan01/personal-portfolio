@@ -581,7 +581,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="hidden md:block h-full"
+              className="hidden md:block h-full overflow-hidden rounded-l-2xl"
             >
               <div className="relative overflow-hidden rounded-l-2xl shadow-2xl h-full">
                 <img
