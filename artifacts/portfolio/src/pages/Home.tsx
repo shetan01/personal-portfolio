@@ -362,6 +362,26 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {[
                     {
+                      name: "MeetingRally",
+                      desc: "Close every meeting with momentum, honest reflection, and a powerful rally cry.",
+                      href: "https://shetan01.github.io/meetingrally",
+                    },
+                    {
+                      name: "MeetingKickoff",
+                      desc: "Open every meeting with the perfect tone, energy and agenda framing.",
+                      href: "https://shetan01.github.io/meetingkickoff",
+                    },
+                    {
+                      name: "MeetingPrep",
+                      desc: "AI-powered preparation for both meeting organizers and participants.",
+                      href: "https://shetan01.github.io/meetingprep",
+                    },
+                    {
+                      name: "MeetingDistill",
+                      desc: "Transform raw meeting notes or transcripts into pure actionable clarity.",
+                      href: "https://shetan01.github.io/meetingdistill",
+                    },
+                    {
                       name: "MeetingSmart",
                       desc: "Calculate the real cost of your meetings. Because every meeting has a price tag. 😮💸",
                       href: "https://shetan01.github.io/meetingsmart",
