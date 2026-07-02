@@ -354,7 +354,7 @@ export default function Home() {
                 className="mb-5"
               >
                 <h3 className="font-sans text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">
-                  🛠️ Apps & Tools I Built with AI
+                  🛠️ Apps & Tools I Built
                 </h3>
                 <p className="text-muted-foreground text-xs mb-3 font-sans">
                   Simple, powerful tools for life and work — built for personal moments and professional operations.
